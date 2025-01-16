@@ -2,13 +2,12 @@ const fullName =
 { firstName: 'Steven' ,
   lastName: 'Roduta'}
 
-function sum(firstName, lastName){
-    return firstName + lastName
-    
+function person(){
+    return {
+        nome: 'fullName.firstName',
+        cognome: 'fullName.lastName'
+    }   
 }
-
-
-module.exports = {fullName , sum , hobbies , things}
 
 const hobbies = 
 {hobbyOne: 'karaoke',
@@ -16,5 +15,10 @@ const hobbies =
  hobbyThree:'cooking'}
 
 function things(hobbyOne, hobbyTwo , hobbyThree){
-    return hobbyOne + hobbyTwo + hobbyThree
+    return [hobbyOne, hobbyTwo , hobbyThree]
 }
+
+
+module.exports = {fullName , person , hobbies , things}
+
+
